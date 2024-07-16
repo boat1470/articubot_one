@@ -6,8 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /RobotModel1
         - /LaserScan1
+        - /Map1
       Splitter Ratio: 0.5
     Tree Height: 787
   - Class: rviz_common/Selection
@@ -49,6 +49,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
+        back_caster_wheel:
+          Value: true
         base_footprint:
           Value: true
         base_link:
@@ -56,8 +58,6 @@ Visualization Manager:
         chassis:
           Value: true
         front_caster_wheel:
-          Value: true
-        imu_link:
           Value: true
         laser_frame:
           Value: true
@@ -82,12 +82,12 @@ Visualization Manager:
             base_footprint:
               {}
             chassis:
+              back_caster_wheel:
+                {}
+              front_caster_wheel:
+                {}
               laser_frame:
                 {}
-            front_caster_wheel:
-              {}
-            imu_link:
-              {}
             left_wheel:
               {}
             right_wheel:
@@ -112,6 +112,11 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        back_caster_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_footprint:
           Alpha: 1
           Show Axes: false
@@ -126,11 +131,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         front_caster_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        imu_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -213,53 +213,6 @@ Visualization Manager:
         Value: /map_updates
       Use Timestamp: false
       Value: true
-    - Alpha: 0.699999988079071
-      Class: rviz_default_plugins/Map
-      Color Scheme: costmap
-      Draw Behind: false
-      Enabled: true
-      Name: Map
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /global_costmap/costmap
-      Update Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /global_costmap/costmap_updates
-      Use Timestamp: false
-      Value: true
-    - Alpha: 1
-      Class: rviz_default_plugins/Polygon
-      Color: 25; 255; 0
-      Enabled: true
-      Name: Polygon
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /global_costmap/published_footprint
-      Value: true
-    - Alpha: 1
-      Class: rviz_default_plugins/Polygon
-      Color: 25; 255; 0
-      Enabled: true
-      Name: Polygon
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /local_costmap/published_footprint
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -306,25 +259,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 7.56251335144043
+      Distance: 3.1647839546203613
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.23185552656650543
-        Y: -1.0327115058898926
-        Z: 0.13340744376182556
+        X: 0.01867426559329033
+        Y: 0.018674254417419434
+        Z: -0.026674827560782433
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.4347964525222778
+      Pitch: 0.7353980541229248
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.0385091304779053
+      Yaw: 3.088555097579956
     Saved: ~
 Window Geometry:
   Displays:
