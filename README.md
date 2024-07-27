@@ -75,8 +75,10 @@ In raspberry pi
 
 ros2 run serial_motor_demo driver --ros-args -p serial_port:=/dev/ttyUSB0 -p buad_rate:=57600 -p loop_rate:=30 -p encoder_cpr:=1443
 
+ros2 launch articubot_one launch_robot.launch.py
+
+ros2 launch articubot_one rplidar.launch.py
+
 
 
 In dev
-
-ros2 run serial_motor_demo gui

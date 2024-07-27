@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <joint name="arm_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="arm_frame"/>
+        <origin xyz="0.0 0 0.075" rpy="0 0 0"/>
+    </joint>
+
+    <link name="arm_frame">
+        <visual>
+            <geometry>
+                <box size="0.02 0.02 0.1"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.26 0.02 0.02"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="0.26 0.02 0.02"/>
+            </geometry>
+            <material name="black"/>
+        </collision>
+        <!-- <xacro:inertial_box mass="0.03" x="${chassis_length}" y="${chassis_width}" z="${chassis_height}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box> -->
+    </link>
+
+</robot>

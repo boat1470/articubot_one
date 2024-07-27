@@ -3,9 +3,9 @@
 
     <xacro:include filename="inertial_macros.xacro"/>
 
-    <xacro:property name="chassis_length" value="0.23"/>
-    <xacro:property name="chassis_width" value="0.23"/>
-    <xacro:property name="chassis_height" value="0.1085"/>
+    <xacro:property name="chassis_length" value="0.15"/>
+    <xacro:property name="chassis_width" value="0.15"/>
+    <xacro:property name="chassis_height" value="0.13"/>
     <xacro:property name="chassis_mass" value="1.0"/>
 
     <xacro:property name="wheel_radius" value="0.033"/>
@@ -13,12 +13,12 @@
     <xacro:property name="wheel_mass" value="0.05"/>
 
     <xacro:property name="wheel_offset_x" value="0.045"/>
-    <xacro:property name="wheel_offset_y" value="0.1265"/>
-    <xacro:property name="wheel_offset_z" value="0.03275"/>
+    <xacro:property name="wheel_offset_y" value="0.10"/>
+    <xacro:property name="wheel_offset_z" value="0.04"/>
 
     <!-- <xacro:property name="caster_wheel_radius" value="${0.01*1}"/> -->
     <xacro:property name="caster_wheel_mass" value="0.01"/>
-    <xacro:property name="caster_wheel_offset_x" value="0.075"/>
+    <xacro:property name="caster_wheel_offset_x" value="0.06"/>
 
     <!-- <xacro:property name="caster_wheel_offset_y" value="0.1265"/> -->
 
