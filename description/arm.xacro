@@ -4,29 +4,44 @@
     <joint name="arm_joint" type="fixed">
         <parent link="chassis"/>
         <child link="arm_frame"/>
-        <origin xyz="0.0 0 0.075" rpy="0 0 0"/>
+        <origin xyz="-0.03 0.0 0.075" rpy="0 0 0"/>
     </joint>
 
     <link name="arm_frame">
         <visual>
+            <origin xyz="0 0 0.05"/>
             <geometry>
                 <box size="0.02 0.02 0.1"/>
             </geometry>
-            <material name="black"/>
+            <material name="brown"/>
         </visual>
         <visual>
-            <origin xyz="0 0 0"/>
+            <origin xyz="0.13 0 0.10"/>
             <geometry>
-                <box size="0.26 0.02 0.02"/>
+                <box size="0.28 0.02 0.02"/>
             </geometry>
-            <material name="black"/>
+            <material name="brown"/>
+        </visual>
+        <visual>
+            <origin xyz="0.28 0 0.10"/>
+            <geometry>
+                <box size="0.02 0.20 0.02"/>
+            </geometry>
+            <material name="brown"/>
         </visual>
         <collision>
-            <origin xyz="0 0 0"/>
+            <origin xyz="0.13 0 10"/>
             <geometry>
-                <box size="0.26 0.02 0.02"/>
+                <box size="0.28 0.02 0.02"/>
             </geometry>
-            <material name="black"/>
+            <material name="brown"/>
+        </collision>
+        <collision>
+            <origin xyz="0.28 0 0.10"/>
+            <geometry>
+                <box size="0.02 0.20 0.02"/>
+            </geometry>
+            <material name="brown"/>
         </collision>
         <!-- <xacro:inertial_box mass="0.03" x="${chassis_length}" y="${chassis_width}" z="${chassis_height}">
             <origin xyz="0 0 0" rpy="0 0 0"/>

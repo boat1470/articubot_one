@@ -12,7 +12,7 @@ def generate_launch_description():
             output='screen',
             parameters=[{
                 'channel_type':'serial',
-                'serial_port': '/dev/serial/by-path/platform-3f980000.usb-usb-0:1.2:1.0-port0',
+                'serial_port': '/dev/ttyUSB1',
                 'serial_baudrate':115200,
                 'frame_id': 'laser_frame',
                 'angle_compensate': True,

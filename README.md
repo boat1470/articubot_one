@@ -52,7 +52,7 @@ ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
 
 #lidar
 
-ros2 run rplidar_ros rplidar_composition --ros-args -p channel_type:=serial -p serial_port:=/dev/ttyUSB0 -p serial_baudrate:=115200 -p frame_id:=laser_frame -p angle_compensate:=true -p scan_mode:=Standard
+ros2 run rplidar_ros rplidar_composition --ros-args -p channel_type:=serial -p serial_port:=/dev/ttyUSB1 -p serial_baudrate:=115200 -p frame_id:=laser_frame -p angle_compensate:=true -p scan_mode:=Standard
 
 
 
@@ -79,6 +79,18 @@ ros2 launch articubot_one launch_robot.launch.py
 
 ros2 launch articubot_one rplidar.launch.py
 
+ros2 service call /stop_motor std_srvs/srv/Empty "{}"
+ros2 service call /start_motor std_srvs/srv/Empty "{}"
+
+python3 -m serial.tools.miniterm /dev/ttyUSB0 57600
+
+journalctl -fe
+
 
 
 In dev
+rviz2 -d /home/boat1470/finding_robot_ws/src/articubot_one/config/real_bot.rviz 
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard  --ros-args -r /cmd_vel:=/diff_cont/cmd_vel_unstamped
+
+ros2 node list
